@@ -1,40 +1,30 @@
 package com.example.activitylifecycle
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.e( "onCreate", "Calisti" )
+        goAPageButton.setOnClickListener{
+            // titleTextView.text = "Merhaba"
 
-    }
+            // sayfa gecisi yapmak istiyorsak bir Intent nesnesi oluşturmamiz gerekmekte
+            val intent = Intent(this@MainActivity, APageActivity::class.java)
+            startActivity(intent)
 
-    override fun onStart() {
-        super.onStart()
-        Log.e( "onStart", "Calisti" )
-    }
+        }
 
-    override fun onResume() {
-        super.onResume()
-        Log.e( "onResume", "Calisti" )
-    }
+        goXPageButton.setOnClickListener{
 
-    override fun onPause() {
-        super.onPause()
-        Log.e( "onPause", "Calisti" )
-    }
+            val intent = Intent(this@MainActivity, XPageActivity::class.java)
+            startActivity(intent)
 
-    override fun onStop() {
-        super.onStop()
-        Log.e( "onStop", "Calisti" )
-    }
+        }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.e( "onDestroy", "Calisti" )
     }
 }
