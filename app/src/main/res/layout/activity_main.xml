@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="TITLE"
+        android:text="GITHUB TITLE"
         android:textColor="#E91E63"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
