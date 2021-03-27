@@ -12,6 +12,7 @@ class XPageActivity : AppCompatActivity() {
 
         goYPageButton2.setOnClickListener {
             val intent = Intent(this@XPageActivity, YPageActivity::class.java)
+            finish()    // sayfa gecisini yap ama kendini de back stack'ten sil
             startActivity(intent)
         }
     }

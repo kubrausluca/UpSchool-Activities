@@ -12,6 +12,7 @@ class APageActivity : AppCompatActivity() {
 
         goBPageButton.setOnClickListener {
             val intent = Intent(this@APageActivity, BPageActivity::class.java)
+            finish()
             startActivity(intent)
         }
 
