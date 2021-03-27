@@ -27,4 +27,13 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    // Anasayfadaki back butonuna -> sayfayi kapatma
+    override fun onBackPressed() {
+        val cikisIntent = Intent(Intent.ACTION_MAIN) // anasayfaya donme
+        cikisIntent.addCategory(Intent.CATEGORY_HOME)   // home ekranina donusu saglama
+        cikisIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK) // yeni uygulama icin hazirim anlaminda flag
+        startActivity(cikisIntent)
+    }
+
 }
